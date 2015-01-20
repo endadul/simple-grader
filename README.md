@@ -45,7 +45,7 @@ Generated report for sample-assignment
 
 ## Tested platform
 
-It's been tested on Linux (Ubuntu 14.04) with Python 2.7.3. It should work for other Linux version.
+It's been tested on Linux (Ubuntu 14.04) with Python 2.7.3. It should work on other Linux version.
     
 ## How to configure the grader
 
