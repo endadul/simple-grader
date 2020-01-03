@@ -12,7 +12,8 @@ int main(int argc, char *argv[])
   while(1){
     try{
       cout << "> " ; 
-      cin >> command;
+      if (!(cin >> command))
+        break;
       if(command == "push"){
         cin >> elem;
         element = atoi (elem.c_str());
@@ -26,11 +27,17 @@ int main(int argc, char *argv[])
         intStack.peek(element);
         cout << element << endl;
       }
+      else if (command == "" || command.empty()){
+        continue; // do nothing
+      }
+      else {
+        cout << "Unknown command" << endl;
+      }
     }
     catch(StackError &e)
     {
+      cout << "Given command: " << command << endl;
       cout << e.what() << e.getMessage() << endl;
     }
   }
-
 }
